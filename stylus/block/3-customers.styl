@@ -1,0 +1,298 @@
+.customers
+	{}
+	padding 50px 0px
+	display flex
+	flex-wrap wrap
+	justify-content center
+	align-items flex-start
+	background-color main-white-background
+	background-image linear-gradient(to top right, #ffda44, #add8e6)  // choice of combination 
+	background-image linear-gradient(to top right, #2593EC, #2C5BA0)  // choice of combination 
+	background-image linear-gradient(to top right, #F6D365, #FDA085)  // choice of combination 
+	background-image linear-gradient(to top right, #ffda44, #F6D365)  // choice of combination 
+	background-image linear-gradient(to top right, #F77062, #FE5196)  // choice of combination 
+	background-image linear-gradient(to top right, main-deep_pink, #764ba2)
+	background-repeat no-repeat
+	background-position 0
+	background-size auto
+
+
+	&__happy
+		{}
+		max-width 360px
+		width 100%
+		margin 10rem 1.875rem
+		position relative
+		display flex
+		flex-direction column
+		align-items center
+		cursor zoom-in
+		background-color main-white-background
+
+		&:focus
+			{}
+			outline none
+			cursor zoom-out
+			border-top 8px solid main-yellow 
+			
+			.customers__modal
+				{}
+				display block
+
+	@media (max-width: 414px)
+		&__happy
+			{}
+			margin 10rem 0px
+			border-top 8px solid transparent
+
+
+	&__caption
+		{}
+		width 100%
+		font-family font-dosis
+		font-weight 200
+		font-size 7rem
+		line-height 6rem
+		text-align center
+		color main-blue
+		transition text-shadow 0.3s, color 0.3s
+		
+		&:hover
+			{}
+			transition text-shadow 0.2s, color 0.2s
+			text-shadow main-deep_pink 1px 1px,main-deep_pink 2px 2px,main-deep_pink 3px 3px,main-deep_pink 4px 4px,main-deep_pink 5px 5px,main-deep_pink 6px 6px,main-deep_pink 7px 7px,main-deep_pink 8px 8px,main-deep_pink 9px 9px,main-deep_pink 10px 10px
+
+
+	&__header
+		{}
+		margin-top -50px
+		margin-bottom 10px
+		width 100%
+		text-align center
+		outline 1px solid main-blue
+		outline-offset -1px
+
+
+	&__header-link
+		{}
+		box-sizing border-box
+		padding 12px
+		position relative
+		display inline-block
+		width 100%
+		text-decoration none
+		text-transform uppercase
+		font-family font-oswald
+		font-weight 400
+		font-size 2rem
+		line-height 2.5rem
+		color main-deep_pink
+		z-index 1
+
+		&::before
+			{}
+			content ''
+			position absolute
+			top 0
+			left 0
+			right 0
+			bottom 0
+			transform scaleY(0)
+			transform-origin 0 100%
+			transition transform 3.125s
+			background-color main-white-background
+			z-index -1
+
+		&:hover::before
+			{}
+			transform scaleY(1)
+			transform-origin 50%
+			background-color main-blue
+			transition transform .125s
+
+	@media (max-width: 414px)
+		&__header-link
+			{}
+			padding 12px 0px
+			font-size 3.2rem
+			line-height 3rem
+
+
+	&__img
+		{}
+		max-width 100%
+		width 100%
+		height auto
+
+
+	&__img-desktop
+		{}
+		max-width 360px
+		max-height 236px
+
+
+	&__img-mobile
+		{}
+		max-width 320px
+		height 454px
+
+	@media (max-width: 414px)
+		&__img-mobile
+			{}
+			max-width 280px
+			height auto
+
+
+	&__source
+		{}
+		position absolute
+		bottom -60px
+		display flex
+		justify-content center
+		align-items center
+		width 100%
+		height 60px
+		background-color main-blue
+
+		a
+			{}
+			height 50px
+			width 60px
+			text-align center
+
+
+	&__source-span
+		{}
+		padding 0 20px
+		font-family font-dosis
+		font-weight 200
+		font-size 2rem
+		line-height 2rem
+		text-transform uppercase
+
+	@media (max-width: 414px)
+		&__source-span
+			{}
+			font-size 2.2rem
+			line-height 2.4rem
+
+
+	&__modal
+		{}
+		box-sizing border-box
+		padding 40px
+		position absolute
+		display none
+		width 100%
+		height 100%
+		background-color main-blue
+		border-bottom 6rem solid main-yellow
+		z-index 2
+
+	@media (max-width: 1366px)
+		&__modal
+			{}
+			border-bottom-width 12rem
+
+
+	@media (max-width: 320px)
+		&__modal
+			{}
+			border-bottom-width 16rem
+
+
+	&__modal-title
+		{}
+		position relative
+		font-family font-oswald
+		font-weight 700
+		font-size 2.125rem  //34
+		line-height 1.125
+		text-transform uppercase
+		color #fff
+		
+		&::after
+			{}
+			content ''
+			position absolute
+			left 0
+			bottom -10px
+			width 75%
+			height 2px
+			background-color main-yellow
+
+	@media (max-width: 1366px)
+		&__modal-title
+			{}
+			font-size 2.750rem
+
+
+	@media (max-width: 414px)
+		&__modal-title
+			{}
+			font-size 3rem
+
+
+	@media (max-width: 320px)
+		&__modal
+			{}
+			border-top-width 5rem
+			outline 1px solid violet
+
+	&__modal-tags
+		{}
+		font-family font-oswald
+		font-style italic
+		font-weight 200
+		font-size 1.5rem
+		line-height 2.25rem
+
+		span
+			{}
+			position relative
+			color main-medium_blue
+			cursor pointer
+
+			&::after
+				{}
+				content ''
+				width 0
+				background-color main-yellow
+
+			&:hover
+				{}
+				color main-medium_blue--bright
+
+				&::after
+					{}
+					content ''
+					position absolute
+					left 0
+					bottom 0
+					width 100%
+					height 1px
+					transition width .225s, background-color .45s
+					background-color main-blue
+
+	@media (max-width: 1366px)
+		&__modal-tags
+			{}
+			font-size 1.75rem
+			line-height 2.35rem
+
+	@media (max-width: 414px)
+		&__modal-tags
+			{}
+			font-size 2rem
+			line-height 2.75rem
+
+
+
+
+
+
+
+
+
+
+

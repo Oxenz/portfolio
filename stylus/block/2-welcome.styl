@@ -1,0 +1,121 @@
+.welcome
+	{}
+	display flex
+	flex-direction column
+	justify-content center
+	align-items center
+	width 100%
+	height 100vh
+	background main-blue url('../img/hero-49ps.jpg') no-repeat 50% 50% fixed
+	background-size cover
+	text-align center
+	overflow hidden
+
+
+	@media (max-width: 640px)
+		{}
+		background-image none
+
+
+	@media (max-width: 320px)
+		{}
+		min-height 640px
+
+
+	&__title
+		{}
+		position relative!important  //fix bug parallax
+		font-family font-oswald
+		font-size 5rem
+		color pink
+
+	@media (max-width: 414px)
+		&__title
+			{}
+
+			span
+				{}
+				display block
+				width 100%
+				letter-spacing 6px
+
+	&__subtitle
+		{}
+		margin-bottom 5rem
+		position relative!important  //fix bug parallax
+
+	@media (max-width: 1366px)
+		&__subtitle
+			padding-left 2rem
+			padding-right 2rem
+
+
+	@media (max-width: 414px)
+		&__subtitle
+			margin-bottom 7rem
+
+
+	&__paragraph-one
+	&__paragraph-second
+	&__paragraph-three
+		{}
+		font-family font-dosis
+		font-weight 200
+		font-size 2.5rem
+		line-height 2.8rem
+		color main-light_blue
+
+
+	&__paragraph-second
+		{}
+		font-style italic  // generated browser, not font
+
+
+	&__social
+		{}
+		padding 2rem
+		left 20px!important  //fix bug parallax
+		top 40vh!important  //fix bug parallax
+		display flex!important  //fix bug parallax
+		flex-direction column
+
+	@media (max-width: 1588px)
+		&__social
+			flex-direction row
+			left auto!important
+			top auto!important
+			bottom 0px
+
+
+	&__social-link
+		{}
+		margin 20px 0px
+
+	@media (max-width: 1588px)
+		&__social-link
+			{}
+			margin 0px 20px
+
+
+	&__link-mail
+		{}
+		vertical-align sub
+
+		.svg__content
+			{}
+			width 2.875rem
+			height 2.875rem
+
+	@media (max-width: 414px)
+		&__link-mail
+			{}
+			margin-left 10px
+			margin-right 10px
+
+			.svg__content
+				{}
+
+
+	@media (max-width: 320px)
+		&__link-mail
+			{}

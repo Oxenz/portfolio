@@ -1,0 +1,63 @@
+body
+	position relative
+	color #fff
+	font-family 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+
+
+.svg
+	{}
+	height auto
+
+	&__social
+		{}
+		width 48px
+		height 48px
+		--dual-color #ffda44
+
+
+		&:hover
+			{}
+			--dual-color #ff4081
+			--td 1.5s
+			--tp fill
+
+
+
+	&__content
+		{}
+		width 50px
+		height 50px
+		--dual-color #ffda44
+
+		&:hover
+			{}
+			--dual-color #ff4081
+			--td 1.3s
+			--tp fill
+
+
+.fade
+	animation 2s fade
+
+
+@keyframes fade
+	0%
+		opacity 0
+
+	100%
+		opacity 1
+
+
+@media (max-width: 1366px)
+	html
+		font-size 12px
+
+
+@media (max-width: 414px)
+	html
+		font-size 10px
+
+
+@media (max-width: 320px)
+	html
+		font-size 9px

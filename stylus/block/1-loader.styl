@@ -1,0 +1,83 @@
+.loader
+	{}
+	display flex
+	position fixed
+	top 0
+	left 0
+	bottom 0
+	right 0
+	animation loader-fade 7800ms forwards  // worked:before 7950ms at slow-3g
+	width 100%
+	height 100%
+	z-index 9
+	background-color main-black
+	overflow hidden
+
+	svg
+		width 100%
+		height 100%
+		fill none 
+		stroke main-deep_pink
+		stroke-width .7px
+
+		path:not(#loading-move)
+			{}
+			stroke-dasharray 1500
+			stroke-dashoffset -1500
+
+		#character-1
+			animation loader-glitch-stroke 1500ms 1000ms forwards
+
+		#character-2
+			animation loader-glitch-stroke 1500ms 1500ms forwards
+
+		#character-3
+			animation loader-glitch-stroke 1500ms 1750ms forwards
+
+		#character-4
+			animation loader-glitch-stroke 1500ms 2000ms forwards
+
+		#character-5
+			animation loader-glitch-stroke 1500ms 2250ms forwards
+
+		#character-6
+			animation loader-glitch-stroke 1500ms 2500ms forwards
+
+		#character-7
+			animation loader-glitch-stroke 1500ms 2750ms forwards
+
+		#loading-line
+			fill main-deep_pink
+			animation loader-fade 500ms 3000ms forwards
+
+		#loading-move
+			fill main-black
+			stroke main-black
+			animation loader-transform-line 1000ms 2950ms forwards
+		
+
+
+@keyframes loader-fade
+	50%
+		opacity 1
+		visibility visible
+
+	100%
+		opacity 0
+		visibility hidden
+
+@keyframes loader-transform-line
+	0%
+		transform translateX(0)
+
+	100%
+		transform translateX(1000px)
+
+
+@keyframes loader-glitch-stroke
+	30%
+		stroke-dashoffset 0 
+
+	100%
+		opacity 0
+		visibility hidden

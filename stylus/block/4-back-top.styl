@@ -1,0 +1,59 @@
+.back-top
+	{}
+	position absolute
+	left 50%
+	bottom 1rem
+	transform translateX(-50%)
+
+
+	&__svg
+		{}
+		max-width 5rem
+		width 100%
+		
+		&:hover
+			{}
+			transition all 2s
+			animation rocket-move 1.5s infinite alternate
+
+			.svg__rocket-smoke-1
+				{}
+				animation-name rocket-impuls
+				animation-duration .5s
+				animation-iteration-count infinite
+
+			.svg__rocket-smoke-2
+				{}
+				animation-name rocket-impuls
+				animation-duration .52s
+				animation-iteration-count infinite
+
+			.svg__rocket-smoke-3
+				{}
+				animation-name rocket-impuls
+				animation-duration .5s
+				animation-iteration-count infinite
+
+			.svg__rocket-smoke-4
+				{}
+				animation-name rocket-impuls
+				animation-duration .52s
+				animation-iteration-count infinite
+
+
+
+@keyframes rocket-move
+	0%
+		padding-bottom 2px
+
+	100%
+		padding-bottom 25px
+
+
+
+@keyframes rocket-impuls
+	0%
+		fill yellow
+
+	100%
+		fill transparent

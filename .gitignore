@@ -1,0 +1,21 @@
+# [ base ]
+
+node_modules/
+bower_components/
+Thumbs.db
+.DS_Store
+prepros.cfg
+
+# [ main ]
+0src/
+*.css
+
+# [ other ]
+
+*.log
+*.sublime*
+*.map
+.idea
+*.psd
+*.ai
+*.lock
